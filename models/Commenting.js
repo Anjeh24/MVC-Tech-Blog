@@ -16,7 +16,7 @@ Comments.init(
       allowNull: false,
     },
     
-    User_ref: {
+    user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -43,4 +43,4 @@ Comments.init(
 
 module.exports = Comments;
 
-//Modeled after mini-project in class
+//Modeled after mini-project in class. Hope it works.
