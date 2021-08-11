@@ -1,4 +1,4 @@
-const { Blogs } = require('../models');
+const { Post } = require('../models');
 
 const postData = [{
         title: 'My First Blog App',
@@ -18,6 +18,6 @@ const postData = [{
     }
 ];
 
-const seedPosts = () => Blogs.bulkCreate(postData);
+const seedPosts = () => Post.bulkCreate(postData);
 
 module.exports = seedPosts;
