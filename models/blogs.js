@@ -11,11 +11,7 @@ Blogs.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    Title: {
+    title: {
       type: DataTypes.STRING,
     },
     date_created: {
@@ -23,7 +19,14 @@ Blogs.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-   
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+          // post must be at least one character long
+          len: [1]
+      }
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -37,7 +40,7 @@ Blogs.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blog',
+    modelName: 'blogs',
   }
 );
 

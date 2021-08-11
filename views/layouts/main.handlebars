@@ -10,43 +10,43 @@
 
 <body>
   <div class="wrapper">
-      <header class="hero">
-          <div>
-            <nav class"nav">
-                    <a class="link" href="/">Home</a>
-                    <a class="link" href="/dashboard">Dashboard</a>
-                    {{#if loggedIn}}
-                    <a class="link" href="/" id="logout">Logout</a>
-                    {{else}}
-                    <a class="link" href="/login">Login</a>
-                    {{/if}}
-                </nav>          
-          </div>
-
-          <h1 class="app-title"><i class="fab "></i>The Tech Blog</h1>
-      </header>
-
+    <header>
+      <h1>
+        <a href="/">MVC Tech Blog</a>
+      </h1>
+        <nav>
+          <span><a href="/">Home</a></span>&nbsp;&nbsp;
+          {{#if loggedIn}}
+          <a href="/dashboard">Dashboard</a>
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+          <a href="/login">Login </a>
+          {{/if}}
+        </nav>
+    </header>
     <main>
       {{{ body }}}
     </main>
+    <footer>
+     © 2021 GitHub, Inc.
+        Terms
+        Privacy
+        Security
+        Status
+        Docs
+        Contact GitHub
+        Pricing
+        API
+        Training
+        Blog
+        About
+    </footer>
   </div>
 
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 
 </body>
 
 </html>
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
